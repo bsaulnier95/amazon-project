@@ -8,23 +8,24 @@
     data-bs-toggle="dropdown"
     aria-expanded="false"
   >
-    Account
+    Your Account
   </a>
   <ul
     class="dropdown-menu dropdown-menu-lg-end"
     aria-labelledby="navbarDropdown"
   >
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Account</a></li>
+    <li><a class="dropdown-item" href="#">Orders</a></li>
     <li><hr class="dropdown-divider" /></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
   </ul>
 </li>
 <% else %>
 <li class="nav-item">
-  <%= link_to "Sign In", root_path, class: 'navbar-brand' %>
+  <%= link_to "Log In", new_user_session_path, class: 'nav-link' %>
 </li>
 <li class="nav-item">
-  <%= link_to "Sign Up", root_path, class: 'navbar-brand' %>
+  <%= link_to "Sign Up", new_user_registration_path, class: 'nav-link' %>
 </li>
+
 <% end %>
