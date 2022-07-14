@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'cart/show'
+  get 'cart', to: 'cart#show'
+  post 'cart/add'
+  post 'cart/remove'
   devise_for :users
   resources :products
-  get "home/index"  
-  root to: "home#index"
+  get 'home/index'
+  root to: 'home#index'
 end

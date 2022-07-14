@@ -16,6 +16,7 @@
   <header>
   <%= render 'layouts/navbar' %>
   <%= render 'layouts/alerts' %>
+  <%= render partial: 'cart/cart' if @render_cart %>
   </header>
   <main>
     <%= yield %>  
