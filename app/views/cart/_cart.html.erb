@@ -1,8 +1,8 @@
 <%= turbo_frame_tag "cart" do %>
   <h1>Cart</h1>
-  <% if @cart.order.count > 0 %>
+  <% if @cart.orders.count > 0 %>
   <p> Total: <%= @cart.total %> </p>
   <% else %>
   <p> No items in cart </p>
   <% end %>
-<% end >
+<% end %>
