@@ -2,6 +2,7 @@
   <h1>Cart</h1>
   <% if @cart.orders.count > 0 %>
   <%= render 'cart/orders' %>
+  <p><strong>Order Total:</strong> <%= @cart.total %></p>
   <% else %>
   <p> No items in cart </p>
   <% end %>

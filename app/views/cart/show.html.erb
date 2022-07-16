@@ -4,4 +4,4 @@
   <% product = order.product %>
   <p><%= product.name %> * <%= order.quantity %> = $<%= product.price * order.quantity %></p>
 <% end %>
-<p>Your total is $<%= @cart.total %> </p>
+<p><strong>Order Total:</strong> $<%= @cart.total %> </p>
