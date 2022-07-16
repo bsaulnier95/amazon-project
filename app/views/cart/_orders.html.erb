@@ -10,7 +10,7 @@
       <%= product.price %>
       </div>
       <div class="col">
-      <%= form_with(url: cart_add_path) do |f| %>
+      <%= form_with(url: cart_add_path(format: turbo_stream)) do |f| %>
       <%= f.hidden_field :id, value: product.id %>
       <%= f.number_field :quantity, value: order.quantity, min: 0 %>
       <%= f.submit "Add To Cart" %>
