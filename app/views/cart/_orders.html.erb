@@ -1,5 +1,6 @@
 <% @cart.orders.each do |order| %>
   <% product = order.product %>
+    <div id="<%= "cart-#{product.id}" %>">
   <div>
     <div class="container">
       <div class="row">
@@ -10,7 +11,7 @@
       <%= product.price %>
       </div>
       <div class="col">
-      <%= form_with(url: cart_add_path(format: turbo_stream)) do |f| %>
+      <%= form_with(url: cart_add_path) do |f| %>
       <%= f.hidden_field :id, value: product.id %>
       <%= f.number_field :quantity, value: order.quantity, min: 0 %>
       <%= f.submit "Add To Cart" %>
@@ -27,6 +28,7 @@
       <%= order.total %>
     </div>
   </div>
+</div>
 </div>
 </div>
 <% end %>
