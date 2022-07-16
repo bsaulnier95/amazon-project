@@ -1,25 +1,32 @@
 <% @cart.orders.each do |order| %>
   <% product = order.product %>
   <div>
-    <div class="container-fluid">
-  
+    <div class="container">
+      <div class="row">
+      <div class="col">
       <strong>Name:</strong>
       <%= product.name %>
       <strong>Price:</strong>
       <%= product.price %>
+      </div>
+      <div class="col">
       <%= form_with(url: cart_add_path) do |f| %>
       <%= f.hidden_field :id, value: product.id %>
       <%= f.number_field :quantity, value: order.quantity, min: 0 %>
       <%= f.submit "Add To Cart" %>
       <% end %>
+    </div>
+      <div class="col">
       <%= form_with(url: cart_remove_path) do |f| %>
       <%= f.hidden_field :id, value: order.id %>
       <%= f.submit "Remove" %>
       <% end %>
+      </div>
+      <div class="col">
       <strong>Total:</strong>
       <%= order.total %>
     </div>
-   </div>
   </div>
-
+</div>
+</div>
 <% end %>
