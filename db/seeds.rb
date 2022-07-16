@@ -9,10 +9,10 @@ Product.destroy_all
 
 
 Product.create!([{
-  name: "Bearded Dragon"
-  description: "Some kind of Wizard Lizard"
-  price: 100.00
-  our_price: 89.99 
+  name: "Bearded Dragon",
+  description: "Some kind of Wizard Lizard",
+  price: 100.00,
+  our_price: 89.99, 
   rating: 3
 }
 ])
