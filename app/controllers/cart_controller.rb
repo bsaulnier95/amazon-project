@@ -17,6 +17,6 @@ class CartController < ApplicationController
   end
 
   def remove
-    order.find_by(id: params[:id]).destroy
+    Order.find_by(id: params[:id]).destroy
   end
 end
