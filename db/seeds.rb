@@ -11,8 +11,59 @@ Product.destroy_all
 Product.create!([{
   name: "Bearded Dragon",
   description: "Some kind of Wizard Lizard",
+  price: 199.00,
+  our_price: 189.99, 
+  rating: 3,
+  animal_class: "Reptile"
+},
+{
+  name: "Giant African Snail",
+  description: "That's a big snail",
+  price: 44.99,
+  our_price: 39.99, 
+  rating: 2,
+  animal_class: "Gastropods"
+},
+{
+  name: "Bearded Dragon",
+  description: "Some kind of Wizard Lizard",
   price: 100.00,
   our_price: 89.99, 
-  rating: 3
+  rating: 3,
+  animal_class: "Gastropods"
+},
+{
+  name: "Bearded Dragon",
+  description: "Some kind of Wizard Lizard",
+  price: 100.00,
+  our_price: 89.99, 
+  rating: 3,
+  animal_class: "Gastropods"
+
+},
+{
+  name: "Bearded Dragon",
+  description: "Some kind of Wizard Lizard",
+  price: 100.00,
+  our_price: 89.99, 
+  rating: 3,
+  animal_class: "Gastropods"
+},
+{
+  name: "Bearded Dragon",
+  description: "Some kind of Wizard Lizard",
+  price: 100.00,
+  our_price: 89.99, 
+  rating: 3,
+  animal_class: "Gastropods"
+},
+{
+  name: "Bearded Dragon",
+  description: "Some kind of Wizard Lizard",
+  price: 100.00,
+  our_price: 89.99, 
+  rating: 3,
+  animal_class: "Gastropods"
 }
 ])
+print "You Got It"
