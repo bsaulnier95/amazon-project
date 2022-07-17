@@ -18,52 +18,91 @@ Product.create!([{
 },
 {
   name: "Giant African Snail",
-  description: "That's a big snail",
+  description: "That's one big snail",
   price: 44.99,
   our_price: 39.99, 
   rating: 2,
   animal_class: "Gastropods"
 },
 {
-  name: "Bearded Dragon",
-  description: "Some kind of Wizard Lizard",
+  name: "Toucan",
+  description: "Standard Tucan. **Owner required to name Sam**",
   price: 100.00,
   our_price: 89.99, 
   rating: 3,
-  animal_class: "Gastropods"
+  animal_class: "Aves"
 },
 {
-  name: "Bearded Dragon",
-  description: "Some kind of Wizard Lizard",
+  name: "Chinchilla",
+  description: "Ch-ch-Chinchilla",
   price: 100.00,
   our_price: 89.99, 
-  rating: 3,
-  animal_class: "Gastropods"
+  rating: 4,
+  animal_class: "Mammal"
 
 },
 {
-  name: "Bearded Dragon",
-  description: "Some kind of Wizard Lizard",
+  name: "Kinkajou",
+  description: "Hardcore Kiss Fan",
+  price: 100.00,
+  our_price: 89.99, 
+  rating: 5,
+  animal_class: "Mammal"
+},
+{
+  name: "Wallaroo",
+  description: "Its like a Kangaroo, but Walla'd instead.",
+  price: 100.00,
+  our_price: 89.99, 
+  rating: 2,
+  animal_class: "Mammal"
+},
+{
+  name: "Sea Slug",
+  description: "A real life Pokemon",
   price: 100.00,
   our_price: 89.99, 
   rating: 3,
   animal_class: "Gastropods"
 },
 {
-  name: "Bearded Dragon",
-  description: "Some kind of Wizard Lizard",
+  name: "Python",
+  description: "A good altnerative to a Ruby snake",
   price: 100.00,
   our_price: 89.99, 
-  rating: 3,
-  animal_class: "Gastropods"
+  rating: 4,
+  animal_class: "Reptile"
 },
 {
-  name: "Bearded Dragon",
-  description: "Some kind of Wizard Lizard",
+  name: "Fennec Fox",
+  description: "Swiper, No Swiping!",
   price: 100.00,
   our_price: 89.99, 
-  rating: 3,
-  animal_class: "Gastropods"
+  rating: 1,
+  animal_class: "Mammal"
+},
+{
+  name: "Aardvark",
+  description: "How was Aurthur one of these?",
+  price: 100.00,
+  our_price: 89.99, 
+  rating: 2,
+  animal_class: "Mammal"
+},
+{
+  name: "Lovebird",
+  description: "Get a room you two!",
+  price: 100.00,
+  our_price: 89.99, 
+  rating: 4,
+  animal_class: "Aves"
+},
+{
+  name: "Water Dragon",
+  description: "Name is very misleading..DO NOT put it underwater..",
+  price: 100.00,
+  our_price: 89.99, 
+  rating: 5,
+  animal_class: "Reptile"
 }
 ])
-print "You Got It"
