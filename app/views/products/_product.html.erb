@@ -1,9 +1,10 @@
 <div id="<%= dom_id product %>">
 
-<div class="card text-white border-info bg-dark mb-3 h-100" style="width: 18rem;">
+<div class="card text-white border-info bg-dark mb-3 h-100" style="width: 16rem;">
 
   
- <%= image_tag("#{product.name}.jpg", alt: "Picture of #{product.name.downcase}.",class: "card-image-top") %>
+<%= image_tag("#{product.name}.jpg", class: "card-image-top",  alt: "Picture of #{product.name}.") %>
+
 
     
  <div class="card-body">  
@@ -35,6 +36,7 @@
    <% end %>
 
 </div>
+
 </div>
 </div>
 
