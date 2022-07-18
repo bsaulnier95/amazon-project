@@ -1,19 +1,41 @@
 <div id="<%= dom_id product %>">
-  <div style="display: flex; justify-content: space-between; margin: 0em 7em">
-    <strong>Name:</strong>
-    <%= product.name %>
-    <strong>Description:</strong>
-    <%= product.description %>
+
+<div class="card text-white border-info bg-dark mb-3 h-100" style="width: 18rem;">
+
+  
+ <%= image_tag("#{product.name}.jpg", alt: "Picture of #{product.name.downcase}.",class: "card-image-top") %>
+
+    
+ <div class="card-body">  
+ <div class="card-title">
+    <strong>Name: </strong>
+    <%= link_to product.name, product %>
+</div>
+
+ <div class="card-text">
     <strong>List Price:</strong>
     <%= product.price %>
+</div>
+
+ <div class="card-text">
     <strong>Our price:</strong>
     <%= product.our_price %>
+</div>
+
+<div class="card-text">
     <strong>Rating:</strong>
+</div>
+
     <%= product.rating %>
     <%= form_with(url: cart_add_path) do |f| %>
     <%= f.hidden_field :id, value: product.id %>
+    <%= f.hidden_field :animal_class, value: product.animal_class %>
     <%= f.number_field :quantity, value: 0, min: 1 %>
     <%= f.submit "Add to Cart" %>
    <% end %>
-  </div>
+
 </div>
+</div>
+</div>
+
+

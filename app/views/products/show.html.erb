@@ -1,10 +1,14 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @product %>
-
-<div>
-  <%= link_to "Edit this product", edit_product_path(@product) %> |
-  <%= link_to "Back to products", products_path %>
-
-  <%= button_to "Destroy this product", @product, method: :delete %>
+<div class="container-fluid justify-content-center">
+  <div class="row">
+    <div class="col">
+      <%= render @product %>
+          <div class="card" style="width: 18rem">
+          <div class="card-body">
+          <h5 class="card-title"><%= @product.name %></h5>
+            <p class="card-text"><strong>About Me:</strong> <%= @product.description %></p>
+            </div>
+      </div>
+    </div>
+  </div>
 </div>
