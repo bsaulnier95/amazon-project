@@ -14,7 +14,7 @@
     class="dropdown-menu dropdown-menu-lg-end"
     aria-labelledby="navbarDropdown"
   >
-    <li><a class="dropdown-item" href="#">Account</a></li>
+    <li><%= link_to "Account", edit_user_registration_path, class: 'dropdown-item' %></a></li>
     <li><a class="dropdown-item" href="#">Orders</a></li>
     <li><hr class="dropdown-divider" /></li>
     <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
