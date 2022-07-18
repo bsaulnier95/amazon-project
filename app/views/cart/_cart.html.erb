@@ -1,9 +1,16 @@
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Your Cart
+  </button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 <%= turbo_frame_tag "cart" do %>
-  <h1>Cart</h1>
-  <% if @cart.orders.count > 0 %>
-  <%= render 'cart/orders' %>
-  <p><strong>Order Total:</strong> <%= @cart.total %></p>
+<% if @cart.orders.count > 0 %>
+  <li><a class="dropdown-item" href="#"><%= render 'cart/orders' %></a><li> 
+  <li><a class="dropdown-item" href="#"><p><strong>Order Total:</strong> <%= @cart.total %></a></p><li> 
   <% else %>
-  <p> No items in cart </p>
+  <li>  <p> No items in cart </p> <li> 
   <% end %>
 <% end %>
+  </ul>
+</div>
+</div>
