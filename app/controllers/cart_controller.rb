@@ -8,7 +8,6 @@ class CartController < ApplicationController
     @product.destoy!
   end
 
-
   def add
     @product = Product.find_by(id: params[:id])
     quantity = params[:quantity].to_i
@@ -20,27 +19,16 @@ class CartController < ApplicationController
     else
       @cart.orders.create(product: @product, quantity:)
     end
-    redirect_to products_path
 
-   #respond_to do |format|
-   #  format.turbo_stream do
-   #    render turbo_stream: [turbo_stream.replace('cart',
-   #                                               partial: 'cart/cart',
-   #                                               locals: { cart: @cart }),
-   #                          turbo_stream.replace(@product)]
-   #  end
-   #end
+    if user_signed_in?
+      redirect_to products_path
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def remove
     Order.find_by(id: params[:id]).destroy
     redirect_to products_path
-    #respond_to do |format|
-    #format.turbo_stream do
-    #    render turbo_stream: turbo_stream.replace('cart',
-    #                                              partial: 'cart/cart',
-    #                                              locals: { cart: @cart })
-    #  end
-    #end
   end
 end
