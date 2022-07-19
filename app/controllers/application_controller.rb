@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :index
+
   before_action :set_render_cart
   before_action :initialize_cart
 
