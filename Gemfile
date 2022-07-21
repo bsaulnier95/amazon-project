@@ -25,6 +25,8 @@ gem 'turbo-rails', '~> 1.0.0'
 gem 'devise'
 gem 'rubocop'
 gem 'stimulus-rails'
+gem 'pry-nav'
+gem 'pry-rails'
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem 'cssbundling-rails'
 

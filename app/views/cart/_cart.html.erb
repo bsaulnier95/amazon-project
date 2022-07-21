@@ -7,7 +7,7 @@
 <%= turbo_frame_tag "cart" do %>
 <% if @cart.orders.count > 0 %>
   <li><a class="dropdown-item" href="#"><%= render 'cart/orders' %></a><li> 
-  <li><a class="dropdown-item" href="#"><p><strong>Order Total:</strong> <%= @cart.total %></a></p><li> 
+  <li><a class="dropdown-item" href="#"><p><strong>Order Total:</strong> <%= number_to_currency(@cart.total) %></a></p><li> 
   <% else %>
   <li>  <p> No items in cart </p> <li> 
   <% end %>
