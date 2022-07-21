@@ -26,14 +26,16 @@
 <div class="card-text">
     <strong>Rating:</strong>
 </div>
-
-    <%= product.rating %>
+<div class="card-text">
+<%= product.rating %>
+</div>    
     <%= form_with(url: cart_add_path) do |f| %>
     <%= f.hidden_field :id, value: product.id %>
     <%= f.hidden_field :animal_class, value: product.animal_class %>
     <%= f.number_field :quantity, value: 0, min: 1 %>
     <%= f.submit "Add to Cart" %>
    <% end %>
+   
 
 </div>
 </div>
