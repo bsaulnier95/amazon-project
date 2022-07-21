@@ -8,13 +8,13 @@
       <strong>Name:</strong>
       <%= product.name %>
       <strong>Price:</strong>
-      <%= number_to_currency(product.price) %>
+      <%= number_to_currency(product.our_price) %>
       </div>
       <div class="col">
       <%= form_with(url: cart_add_path) do |f| %>
       <%= f.hidden_field :id, value: product.id %>
       <%= f.number_field :quantity, value: order.quantity, min: 0 %>
-      <%= f.submit "Add To Cart" %>
+      <%= f.submit "Update" %>
       <% end %>
     </div>
       <div class="col">
