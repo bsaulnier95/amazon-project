@@ -26,16 +26,18 @@ class CheckoutsController < ApplicationController
                                                    quantity: 1
                                                  }],
                                                  mode: 'payment',
-                                                 success_url: 'http://localhost:3000/checkout/success',
-                                                 cancel_url: 'http://localhost:3000/checkout/success'
+                                                 success_url: checkout_success_url,
+                                                 cancel_url: 'http://localhost:3000/checkout/failed'
                                                })
-    respond_to do |format|
-      format.js
-    end
+  redirect_to session.url, allow_other_host: true
   end
 
-  def success; end
-  def failed; end
+
+
+  def failed
+  end
+
+
 
   # Use callbacks to share common setup or constraints between actions.
   def product

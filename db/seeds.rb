@@ -10,32 +10,32 @@ Product.destroy_all
 Product.create!([{
                   name: 'Bearded Dragon',
                   description: 'Some kind of Wizard Lizard',
-                  price: 150,
-                  our_price: 135,
+                  price: 15000,
+                  our_price: 13500,
                   rating: 3,
                   animal_class: 'Reptile'
                 },
                  {
                    name: 'Giant African Snail',
                    description: "That's one big snail",
-                   price: 44,
-                   our_price: 39,
+                   price: 4400,
+                   our_price: 3900,
                    rating: 2,
                    animal_class: 'Gastropods'
                  },
                  {
                    name: 'Toucan',
                    description: 'Standard Tucan. **Owner required to name Sam**',
-                   price: 100,
-                   our_price: 89,
+                   price: 10000,
+                   our_price: 8900,
                    rating: 3,
                    animal_class: 'Aves'
                  },
                  {
                    name: 'Chinchilla',
                    description: 'Ch-ch-Chinchilla',
-                   price: 50,
-                   our_price: 30,
+                   price: 5000,
+                   our_price: 3000,
                    rating: 4,
                    animal_class: 'Mammal'
 
@@ -43,64 +43,64 @@ Product.create!([{
                  {
                    name: 'Kinkajou',
                    description: 'Hardcore Kiss Fan',
-                   price: 70,
-                   our_price: 60,
+                   price: 7000,
+                   our_price: 6000,
                    rating: 5,
                    animal_class: 'Mammal'
                  },
                  {
                    name: 'Wallaroo',
                    description: "Its like a Kangaroo, but Walla'd instead.",
-                   price: 300,
-                   our_price: 225,
+                   price: 30000,
+                   our_price: 22500,
                    rating: 2,
                    animal_class: 'Mammal'
                  },
                  {
                    name: 'Sea Slug',
                    description: 'A real life Pokemon',
-                   price: 30,
-                   our_price: 25,
+                   price: 3000,
+                   our_price: 2500,
                    rating: 3,
                    animal_class: 'Gastropods'
                  },
                  {
                    name: 'Python',
                    description: 'A good altnerative to a Ruby snake',
-                   price: 60,
-                   our_price: 50,
+                   price: 6000,
+                   our_price: 5000,
                    rating: 4,
                    animal_class: 'Reptile'
                  },
                  {
                    name: 'Fennec Fox',
                    description: 'Swiper, No Swiping!',
-                   price: 90.00,
-                   our_price: 85,
+                   price: 9000,
+                   our_price: 8500,
                    rating: 1,
                    animal_class: 'Mammal'
                  },
                  {
                    name: 'Aardvark',
                    description: 'How was Aurthur one of these?',
-                   price: 240,
-                   our_price: 210,
+                   price: 24000,
+                   our_price: 21000,
                    rating: 2,
                    animal_class: 'Mammal'
                  },
                  {
                    name: 'Lovebird',
                    description: 'Get a room you two!',
-                   price: 60,
-                   our_price: 50,
+                   price: 6000,
+                   our_price: 5000,
                    rating: 4,
                    animal_class: 'Aves'
                  },
                  {
                    name: 'Water Dragon',
                    description: 'Name is very misleading..DO NOT put it underwater..',
-                   price: 400,
-                   our_price: 200,
+                   price: 40000,
+                   our_price: 20000,
                    rating: 5,
                    animal_class: 'Reptile'
                  }])

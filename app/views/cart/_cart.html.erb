@@ -6,8 +6,11 @@
 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 <%= turbo_frame_tag "cart" do %>
 <% if @cart.orders.count > 0 %>
-  <li><a class="dropdown-item" href="#"><%= render 'cart/orders' %></a><li> 
-  <li><a class="dropdown-item" href="#"><p><strong>Order Total:</strong> <%= number_to_currency(@cart.total) %></a></p><li> 
+  <li><a class="dropdown-item" href="#"><%= render 'cart/orders' %></a></li> 
+  <li><a class="dropdown-item" href="#"><p><strong>Order Total:</strong> <%= number_to_currency(@cart.total) %></a></p></li> 
+  #one of the two options below. If db is corrected utilize checkout_create_path
+  <li><a class="dropdown-item"><input type="submit" name="commit" value="Purchase" class="purchase" data-disable-with="Purchase"></a></li> #
+  <%= button_to "Buy Now", checkout_create_path, params: {id: @cart.id}, remote: true %> 
   <% else %>
   <li>  <p> No items in cart </p> <li> 
   <% end %>
