@@ -15,12 +15,16 @@
   </head>  
   
   <body>  
+
   <header>
   <%= render 'layouts/navbar' %>
   <%= render 'layouts/alerts' %>
   </header>
   <main>
-    <%= yield %>  
+    <div class="bg-image" 
+    style="background-image: url(<%= asset_path 'background.jpg' %>); height: 100vh">
+<%= yield %> 
   </main> 
-  </body>  
+  </body> 
+
 </html>  
