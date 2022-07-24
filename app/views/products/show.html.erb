@@ -1,14 +1,23 @@
-
-<div class="container-fluid justify-content-center">
+<div class="container d-flex justify-content-center">
   <div class="row">
-    <div class="col">
-      <%= render @product %>
-          <div class="card" style="width: 18rem">
-          <div class="card-body">
-          <h5 class="card-title"><%= @product.name %></h5>
-            <p class="card-text"><strong>About Me:</strong> <%= @product.description %></p>
-            <%= link_to "Back to products", products_path %>
-            </div>
+    <div class="col top-pad"><%= render @product %></div>
+  </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title"><%= @product.name %></h5>
+        <p class="card-text">
+          <strong>About Me:</strong> <%= @product.description %>
+        </p>
+        <div class="card-text">
+          <strong>Rating:</strong>
+          <%= @product.rating %>
+        </div>
+        <%= link_to "Back to products", products_path %>
+      </div>
+
+      </div>
       </div>
     </div>
   </div>

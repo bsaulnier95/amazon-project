@@ -1,6 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
+    <% if current_user %>
     <%= link_to "Amazoo", root_path, class: 'navbar-brand' %>
+    <% else %>
+    <%= link_to "Amazoo", new_user_registration_path, class: 'navbar-brand' %>
+    <% end %>
     <button
       class="navbar-toggler"
       type="button"
