@@ -26,6 +26,34 @@ $h2-font-size: .75rem;
   background-size: cover;
   };
 
+  .alert {
+    animation: hideMe 10s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+  };
+
+  @keyframes hideMe {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  };
+
+  .help-block.with-errors, .form-control, .form-group, ul.list-unstyled {
+    color: #ff5050;
+    margin: 0;
+    padding: 0;
+    line-height: 15px;
+   };
+
 
 @import 'bootstrap/scss/bootstrap';  
 @import 'bootstrap-icons/font/bootstrap-icons';

@@ -11,20 +11,17 @@
       <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
       <%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
       <script src="https://js.stripe.com/v3/"></script>
-  </head>  
-  </head>  
-  
-  <body>  
-
   <header>
   <%= render 'layouts/navbar' %>
-  <%= render 'layouts/alerts' %>
+  
   </header>
-  <main>
+  <body>
+  <main>  
     <div class="bg-image" 
-    style="background-image: url(<%= asset_path 'background.jpg' %>); height: 100vh">
-<%= yield %> 
-  </main> 
+    style="background-image: url(<%= asset_path 'background.jpg' %>)">
+    <%= render 'layouts/alerts' %>
+    <%= yield %> 
+  </main>
   </body> 
 
 </html>  

@@ -1,10 +1,13 @@
 
-<div class="container col-xl-10 col-xxl-8 px-4 py-5">
-<div class="row align-items-center g-lg-5 py-5">
-<div class="col-md-10 mx-auto col-lg-5">
-<form class="p-4 p-md-5 border rounded-3 bg-light">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
+
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+ 
+<div class="row align-items-center g-lg-5 py-5">
+
+<div class="col-md-10 mx-auto col-lg-5">
+<div class="p-4 p-md-5 border rounded-3 bg-light">
 
   <div class="field form-floating mb-3">
     <%= f.email_field :email, autofocus: true, class: "form-control" %>
@@ -26,33 +29,25 @@
     <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
     <%= f.label :first_name %>
   </div>
-      <label>
-  <input type="checkbox" value="remember-me"> Remember me
-  </label>
-  <div class="row align-items-center g-lg-1 py-4">
+  <div class="row align-items-center g-lg-3 py-1">
 <div class="col">
-
+<div class="actions">
 <%= f.submit "Sign up", autofocus: true, class: "w-100 btn btn-lg btn-primary" %>
 </div>
-<div class="checkbox mb-3">
+
 <hr class="my-4">
-<small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
-</div>
- 
+<small class="text-muted">By clicking Sign up, you agree to the terms of use.</small><br><br>
 
-</div>
+<% end %>
 
-
-<div class="row">
 <div class="col-lg">
+  <small class="text-muted">Already have an account?</small>
 <%= render "users/shared/links", class: "w-100 btn btn-lg btn-primary" %>
 </div>
 </div>
-
- 
+</div>
 </form>
-<% end %>
-</div>
-</div>
-</div>
+
+
+
 
