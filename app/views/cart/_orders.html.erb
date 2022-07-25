@@ -8,7 +8,7 @@
       <strong>Name:</strong>
       <%= product.name %>
       <strong>Price:</strong>
-      <%= number_to_currency(product.our_price) %>
+      $<%= price_adjust(product.our_price) %>.00
       </div>
       <div class="col">
       <%= form_with(url: cart_add_path) do |f| %>
@@ -25,7 +25,7 @@
       </div>
       <div class="col">
       <strong>Total:</strong>
-      <%= number_to_currency(order.total) %>
+      $<%= price_adjust(order.total) %>.00
     </div>
   </div>
 </div>

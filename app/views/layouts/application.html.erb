@@ -1,7 +1,7 @@
 <!DOCTYPE html>  
 <html>  
   <head>  
-      <title>Amazoo</title>  
+      <title>Amazoo</title>
       <meta name="viewport" content="width=device-width,initial-scale=1">  
       <%= csrf_meta_tags %>  
       <%= csp_meta_tag %>  
@@ -11,6 +11,7 @@
       <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
       <%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
       <script src="https://js.stripe.com/v3/"></script>
+      <%= favicon_link_tag asset_path('paw.png') %>
   <header>
   <%= render 'layouts/navbar' %>
   
