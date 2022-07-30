@@ -14,7 +14,7 @@
 </div>
 <% if current_user %>
   <% if current_user.admin? %>
-    <%= button_to "New product", new_product_path %>
+    <%= link_to "New product", new_product_path, class:"btn btn-secondary" %>
   <% end %>
 <% end %>
 

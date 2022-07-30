@@ -6,5 +6,3 @@ class Cart < ApplicationRecord
     orders.to_a.sum { |order| order.total }
   end
 end
-
-

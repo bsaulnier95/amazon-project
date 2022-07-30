@@ -61,12 +61,16 @@ $h2-font-size: .75rem;
     animation: hideMe 10s 1;
     animation-fill-mode: forwards;
     animation-delay: 2s;
+    text-align: center;
+    font-size: 1rem;
   };
   .notice {
     color: green;
     animation: hideMe 10s 1;
     animation-fill-mode: forwards;
     animation-delay: 2s;
+    text-align: center;
+    font-size: 1rem;
   };
 
   @keyframes hideMe {
