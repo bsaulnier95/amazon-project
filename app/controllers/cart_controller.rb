@@ -22,7 +22,7 @@ class CartController < ApplicationController
 
     if user_signed_in?
       redirect_to request.referrer
-      flash[:notice] = 'Your item was added to cart!'
+      flash[:notice] = 'Cart Updated!'
     else
       redirect_to new_user_session_path
     end
@@ -31,6 +31,6 @@ class CartController < ApplicationController
   def remove
     Order.find_by(id: params[:id]).destroy
     redirect_to request.referrer
-    flash[:alert] = 'Your item was removed'
+    flash[:alert] = 'Your item was removed!'
   end
 end
