@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
   belongs_to :product
-  belongs_to :cart, dependent: :destroy
+  has_many :cart
 
   def total
     product.our_price * quantity

@@ -9,7 +9,6 @@ class CartController < ApplicationController
   end
 
   def add
-    binding.pry
     @product = Product.find_by(id: params[:id])
     quantity = params[:quantity].to_i
     current_order = @cart.orders.find_by(product_id: @product.id)
@@ -22,8 +21,8 @@ class CartController < ApplicationController
     end
 
     if user_signed_in?
-      redirect_to request.referrer 
-      flash[:notice] = "Your item was added to cart!"  
+      redirect_to request.referrer
+      flash[:notice] = 'Your item was added to cart!'
     else
       redirect_to new_user_session_path
     end
@@ -31,7 +30,7 @@ class CartController < ApplicationController
 
   def remove
     Order.find_by(id: params[:id]).destroy
-    redirect_to  request.referrer 
-    flash[:alert] = "Your item was removed"  
+    redirect_to request.referrer
+    flash[:alert] = 'Your item was removed'
   end
 end
