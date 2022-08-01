@@ -27,6 +27,7 @@ gem 'rubocop'
 gem 'stimulus-rails'
 gem 'pry-nav'
 gem 'pry-rails'
+gem 'rspec'
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem 'cssbundling-rails'
 
