@@ -23,11 +23,12 @@ gem 'turbo-rails', '~> 1.0.0'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'devise'
-gem 'rubocop'
-gem 'stimulus-rails'
 gem 'pry-nav'
 gem 'pry-rails'
 gem 'rspec'
+
+gem 'rubocop'
+gem 'stimulus-rails'
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem 'cssbundling-rails'
 
@@ -53,11 +54,12 @@ gem 'bootsnap', require: false
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-gem "image_processing", "~> 1.2"
+gem 'image_processing', '~> 1.2'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -78,5 +80,5 @@ group :test do
   gem 'webdrivers'
 end
 
-gem "stripe", "~> 6.5"
-gem "pay", "~> 4.0"
+gem 'pay', '~> 4.0'
+gem 'stripe', '~> 6.5'
