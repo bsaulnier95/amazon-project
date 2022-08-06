@@ -31,6 +31,6 @@ class CartController < ApplicationController
   def remove
     Order.find_by(id: params[:id]).destroy
     redirect_to request.referrer
-    flash[:alert] = ' Your item was removed!'
+    flash[:alert] = 'Your item was removed!'
   end
 end
