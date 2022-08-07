@@ -3,9 +3,26 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+Order.destroy_all
 Product.destroy_all
+User.destroy_all
+
+
+User.create!([{
+              first_name: 'Admin',
+              email: 'admin@test.com',
+              password: 'test123',
+              role: 2,
+              },
+              {
+              first_name: 'User',
+              email: 'user@test.com',
+              password: 'test123',
+              role: 0,
+              },
+            ])
 
 Product.create!([{
                   name: 'Bearded Dragon',
