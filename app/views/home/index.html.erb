@@ -1,3 +1,12 @@
+<% if params[:success] %>
+<div class="notice mb-5" role="notice">
+  Order Successful!
+</div>
+<% else %>
+<div class="alert mb-5" role="alert">
+  Something went wrong with your order.
+</div>
+<% end %>
 <% if current_user %>
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
 <div class="row">

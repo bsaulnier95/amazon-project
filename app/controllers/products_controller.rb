@@ -7,7 +7,8 @@ class ProductsController < ApplicationController
   end
 
   # GET /products/1 or /products/1.json
-  def show; end
+  def show
+  end
 
   # GET /products/new
   def new
@@ -31,8 +32,8 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
-    end
   end
+
 
   # PATCH/PUT /products/1 or /products/1.json
   def update
@@ -70,3 +71,4 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :description, :price, :our_price, :rating, :image, :animal_class)
   end
 end
+

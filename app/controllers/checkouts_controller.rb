@@ -1,52 +1,35 @@
 class CheckoutsController < ApplicationController
   before_action :authenticate_user!
-  # #show method for testing
-  def show
-    current_user.set_payment_processor :stripe
-    current_user.payment_processor.customer
-
-    @checkout_session = current_user
-                        .payment_processor
-                        .checkout(
-                          mode: 'payment',
-                          line_items: 'price_1LNRqtGg9juP5wG5KS8gDYIy',
-                          success_url: checkout_success_url
-
-                        )
-  end
 
   def create
-    products = Product.find(params[:id])
+    checkout_items = Product.find(params[:id])
     session = Stripe::Checkout::Session.create({
                                                  payment_method_types: ['card'],
                                                  line_items: [{
-                                                   name: product.name,
-                                                   amount: product.our_price.to_i,
+                                                   name: checkout_items[:name],
+                                                   amount: checkout_items[:our_price],
                                                    currency: 'usd',
-                                                   quantity: 1
-                                                 }],
-                                                 mode: 'payment',
-                                                 success_url: checkout_success_url,
-                                                 cancel_url: 'http://localhost:3000/checkout/failed'
+                                                   quantity: 1,
+                                                   }],
+                                                   mode: 'payment',
+                                                   success_url: root_url(success: true),
+                                                   cancel_url: root_url
                                                })
   redirect_to session.url, allow_other_host: true
   end
 
+  private
 
-
-  def failed
-  end
-
-
-
-  # Use callbacks to share common setup or constraints between actions.
+  
   def product
     @product = Product.find(params[:id])
   end
-
-  # Only allow a list of trusted parameters through.
-
+  
   def product_params
     params.require(:product).permit(:name, :description, :price, :our_price, :rating, :image, :animal_class)
   end
 end
+
+#def checkout_params
+#  params.require(:checkout).permit(products: [])
+#end

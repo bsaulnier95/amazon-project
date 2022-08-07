@@ -8,7 +8,7 @@
 <% if @cart.orders.count > 0 %>
   <li><a class="dropdown-item" href="#"><%= render 'cart/orders' %></a></li> 
   <li><a class="dropdown-item" href="#"><p><strong>Order Total:</strong> $<%= price_adjust(@cart.total) %>.00</a></p></li> 
-  <li><a class="dropdown-item"><input type="submit" name="commit" value="Purchase" class="purchase" data-disable-with="Purchase"></a></li>
+  <li><a class="dropdown-item"><%= button_to "Purchase", checkout_create_path, params: {id: @products}, remote: true, class:"btn btn-primary border-secondary rounded-pill form-control" %></a></li>
   <% else %>
   <li>  <p> No items in cart </p> <li> 
   <% end %>
