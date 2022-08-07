@@ -21,7 +21,7 @@ class CartController < ApplicationController
     end
 
     if user_signed_in?
-      redirect_to request.referrer
+      redirect_to products_url
       flash[:notice] = 'Cart Updated!'
     else
       redirect_to new_user_session_path
