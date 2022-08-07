@@ -2,7 +2,7 @@
 <div class="notice mb-5" role="notice">
   Order Successful!
 </div>
-<% else %>
+<% elsif params[:failed] %>
 <div class="alert mb-5" role="alert">
   Something went wrong with your order.
 </div>
@@ -21,7 +21,7 @@
     <div class="container">
     <div class="row">
     <div class="col center" align="center">
-    <%= link_to 'Our Animals', products_path, class: "col-lg-3 btn btn-success btn-lg btn-block", method: :get %> 
+    <%= link_to 'Our Animals', products_url, class: "col-lg-3 btn btn-success btn-lg btn-block", method: :get %> 
   </div>
   </div>
     </div>
