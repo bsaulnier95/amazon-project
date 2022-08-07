@@ -14,12 +14,14 @@ User.create!([{
               first_name: 'Admin',
               email: 'admin@test.com',
               password: 'test123',
+              encrypted_password: 'test123',
               role: 2,
               },
               {
               first_name: 'User',
               email: 'user@test.com',
               password: 'test123',
+              encrypted_password: 'test123',
               role: 0,
               },
             ])
