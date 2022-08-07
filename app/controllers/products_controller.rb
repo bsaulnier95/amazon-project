@@ -19,6 +19,7 @@ class ProductsController < ApplicationController
 
   # POST /products or /products.json
   def create
+    if current_user.admin?
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -29,6 +30,7 @@ class ProductsController < ApplicationController
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
+    end
     end
   end
 

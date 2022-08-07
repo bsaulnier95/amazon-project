@@ -29,6 +29,7 @@ gem 'rspec'
 
 gem 'rubocop'
 gem 'stimulus-rails'
+gem 'pundit'
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem 'cssbundling-rails'
 
