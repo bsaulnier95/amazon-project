@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
 
   # POST /products or /products.json
   def create
+    authorize(@product)
     @product = Product.new(product_params)
     respond_to do |format|
       if @product.save

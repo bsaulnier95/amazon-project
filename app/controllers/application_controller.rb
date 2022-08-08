@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
+  include Pundit::Authorization
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!, except: :index
   before_action :set_render_cart
   before_action :initialize_cart
-  include Pundit::Authorization
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
