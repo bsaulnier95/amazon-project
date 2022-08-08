@@ -1,18 +1,17 @@
 class ApplicationController < ActionController::Base
-  include Pundit::Authorization
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!, except: :index
   before_action :set_render_cart
   before_action :initialize_cart
-
+  include Pundit::Authorization
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
- 
+
   private
- 
+
   def user_not_authorized
-    flash[:alert] = "You are not authorized to perform this action."
+    flash[:alert] = 'You are not authorized to perform this action.'
     redirect_to(request.referrer || root_path)
   end
 

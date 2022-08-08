@@ -7,13 +7,12 @@ class ProductsController < ApplicationController
   end
 
   # GET /products/1 or /products/1.json
-  def show
-  end
+  def show; end
 
   # GET /products/new
   def new
     @product = Product.new
-    authorize (@product)
+    authorize(@product)
   end
 
   # GET /products/1/edit
@@ -22,8 +21,6 @@ class ProductsController < ApplicationController
   # POST /products or /products.json
   def create
     @product = Product.new(product_params)
-    authorize (@product)
-
     respond_to do |format|
       if @product.save
         format.html { redirect_to product_url(@product), notice: 'Product was successfully created.' }
@@ -34,7 +31,6 @@ class ProductsController < ApplicationController
       end
     end
   end
-
 
   # PATCH/PUT /products/1 or /products/1.json
   def update
@@ -72,4 +68,3 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :description, :price, :our_price, :rating, :image, :animal_class)
   end
 end
-
