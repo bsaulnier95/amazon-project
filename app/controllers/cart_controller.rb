@@ -5,7 +5,7 @@ class CartController < ApplicationController
 
   def destroy
     @product = Product.find_by(id: params[:id])
-    @product.destoy!
+    @product.destroy!
   end
 
   def add
